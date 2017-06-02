@@ -1,5 +1,8 @@
 var Videos = Backbone.Collection.extend({
 
-  model: Video
-
+  model: Video,
+  
+  search: function() {
+  }
+  
 });
