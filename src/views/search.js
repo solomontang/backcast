@@ -1,6 +1,17 @@
 var SearchView = Backbone.View.extend({
   
-  el: '.search', //<======
+  // initialize: function() {
+    
+  // }
+  events: {
+    'click .btn': 'handleClick'
+  },
+
+  handleClick: function() {
+    var input = $('.form-control').val();
+    this.collection.search(input);
+    console.log('see if it works ', input);
+  },
 
   render: function() {
     this.$el.html(this.template());
